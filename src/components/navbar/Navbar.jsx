@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Emergency Bar */}
-      <div className="bg-blue-600 text-white text-center text-sm py-2">Emergency call: (406) 555-0120</div>
+      {/* <div className="bg-red-600 text-white text-center text-sm py-2">Emergency call: (406) 555-0120</div> */}
 
       {/* Main Navbar */}
       <nav className="bg-gray-100 shadow-sm">
@@ -17,7 +17,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl"><FaHospitalSymbol /></div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 text-white font-bold text-xl"><FaHospitalSymbol /></div>
               <div>
                 <h1 className="text-sm text-gray-500">INDIRA</h1>
                 <p className="text-sm font-semibold text-gray-800 -mt-1">HOSPITAL</p>
@@ -26,15 +26,19 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-              <Link to="/" className="text-blue-600">Home</Link>
-              <Link to="/about" className="hover:text-blue-600">About Us</Link>
-              <Link to="/services" className="hover:text-blue-600">Services</Link>
-              <Link to="/contact" className="hover:text-blue-600">Contact</Link>
+              <Link to="/" className="text-red-600">Home</Link>
+              <Link to="/about" className="hover:text-red-600">About Us</Link>
+              <Link to="/services" className="hover:text-red-600">Services</Link>
+              <Link to="/contact" className="hover:text-red-600">Contact</Link>
+              <div className="text-black text-center text-sm py-2 cursor-pointer hover:text-red-600">Emergency call: (406) 555-0120</div>
             </div>
+
+            {/* Top Emergency Bar */}
+            
 
             {/* Book Appointment Button */}
             <div className="hidden md:block">
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+              <button className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">
                 Book Appointment
               </button>
             </div>
