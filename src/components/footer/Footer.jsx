@@ -11,7 +11,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-gray-100 text-gray-700">
+        <footer className="bg-red-100 text-black">
 
             {/* Top Section */}
             <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -21,7 +21,7 @@ const Footer = () => {
                     <div className="flex items-center gap-3 mb-4">
                         <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl"><FaHospitalSymbol /></div>
                         <div>
-                            <h2 className="font-semibold text-lg">GENERAL</h2>
+                            <h2 className="font-semibold text-lg">INDIRA</h2>
                             <p className="text-sm -mt-1">HOSPITAL</p>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const Footer = () => {
 
                 {/* Column 2 */}
                 <div>
-                    <h3 className="font-semibold mb-4 tracking-wide">PATIENT INFORMATION</h3>
+                    <h3 className="font-bold mb-4 tracking-wide">PATIENT INFORMATION</h3>
                     <ul className="space-y-2">
                         <li className="hover:text-red-600 cursor-pointer">Find a Doctor</li>
                         <li className="hover:text-red-600 cursor-pointer">Health Library</li>
@@ -43,7 +43,7 @@ const Footer = () => {
 
                 {/* Column 3 */}
                 <div>
-                    <h3 className="font-semibold mb-4 tracking-wide">RESEARCH & EDUCATION</h3>
+                    <h3 className="font-bold mb-4 tracking-wide">RESEARCH & EDUCATION</h3>
                     <ul className="space-y-2">
                         <li className="hover:text-red-600 cursor-pointer">School of Medicine</li>
                         <li className="hover:text-red-600 cursor-pointer">Medical Education</li>
@@ -54,7 +54,7 @@ const Footer = () => {
 
                 {/* Column 4 */}
                 <div>
-                    <h3 className="font-semibold mb-4 tracking-wide">FOR HEALTH PROFESSIONALS</h3>
+                    <h3 className="font-bold mb-4 tracking-wide">FOR HEALTH PROFESSIONALS</h3>
                     <ul className="space-y-2">
                         <li className="hover:text-red-600 cursor-pointer">Transfer a patient</li>
                         <li className="hover:text-red-600 cursor-pointer">Mount Sinai Connect</li>
