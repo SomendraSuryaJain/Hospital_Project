@@ -1,60 +1,50 @@
 import React from "react";
-import img from '../../assets/aboutus-img.jpg';
+// import hospitalImg from "../assets/hospital.jpg";
 
 const AboutSection = () => {
   return (
-    <section className="bg-gray-100 py-16 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-gray-200 py-12 px-4 sm:px-6 lg:px-20">
+      <div className="max-w-6xl mx-auto">
         
-        {/* Small Heading */}
-        <p className="text-center text-sm tracking-widest text-gray-500 uppercase mb-4">
-          About Us
+        {/* Top Heading Text */}
+        <p className="text-center text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+          We are committed to providing exceptional patient care and promoting
+          wellness in our community. We offer personalized care plans tailored
+          to meet the unique needs of each patient.
         </p>
 
-        {/* Main Heading */}
-        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 max-w-4xl mx-auto leading-tight mb-14">
-          We always delivers expertise and compassion in every interaction.
-        </h2>
-
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Image */}
-          <div className="w-full">
-            <img src={img} alt="Medical Team"
-              className="rounded-2xl shadow-lg w-full h-full object-cover"/>
-          </div>
-
-          {/* Text Content */}
-          <div>
-            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6">
-              Experience exceptional medical care at the General Hospital, a
-              luxury hotel designed to provide comfortable and personalized
-              healthcare services to its guests.
-            </h3>
-
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              General Hospital is a luxury medical facility that provides
-              top-notch medical care to its patients. With state-of-the-art
-              technologies and experienced medical professionals, we offer
-              personalized treatment options for all kinds of medical
-              conditions. Our facility is equipped with comfortable and
-              spacious rooms.
-            </p>
-
-            <p className="text-gray-600 mb-8 leading-relaxed italic">
-              "Experience top-notch medical care at General Hospital, where our
-              expert team of doctors and modern facilities ensure your
-              well-being. Rest easy in our luxurious accommodations and ease
-              your worries."
-            </p>
-
-            <button className="px-6 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition duration-300">
-              Read More
-            </button>
-          </div>
-
+        {/* Image */}
+        <div className="mt-10">
+          <img
+            src="https://websitedemos.net/general-hospital-04/wp-content/uploads/sites/1482/2023/07/about-us.jpg"
+            alt="Hospital"
+            className="w-full h-auto rounded-2xl shadow-lg object-cover"
+          />
         </div>
+
+        {/* Bottom Content */}
+        <div className="mt-10 space-y-6 text-gray-600 text-sm sm:text-base leading-relaxed">
+          <p>
+            General Hospital is a luxury medical facility that is dedicated to
+            providing the highest quality medical care to its patients. Our
+            state-of-the-art hospital is staffed by some of the best and
+            compassionate medical professionals in the industry. We offer a
+            wide range of medical services, including general surgery,
+            neurology, cardiology, oncology, and much more.
+          </p>
+
+          <p>
+            Welcome to the General Hospital, a luxury medical facility that
+            offers world-class medical services to ensure the well-being of our
+            patients. Our highly skilled medical professionals and
+            state-of-the-art equipment enable us to provide specialized care to
+            our patients. Whether you are visiting for a routine check-up or a
+            complex medical procedure, we are committed to providing
+            comprehensive care and personalized attention to meet your health
+            needs.
+          </p>
+        </div>
+
       </div>
     </section>
   );

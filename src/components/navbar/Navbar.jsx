@@ -1,52 +1,53 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { FaHospitalSymbol } from "react-icons/fa";
-import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'; // Link ki jagah NavLink import karein
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Active link ke liye reusable function
+  const activeLinkStyle = ({ isActive }) => 
+    isActive ? "text-red-600 transition-colors" : "hover:text-red-600 transition-colors";
+
   return (
     <>
-      {/* Top Emergency Bar */}
-      {/* <div className="bg-red-600 text-white text-center text-sm py-2">Emergency call: (406) 555-0120</div> */}
-
-      {/* Main Navbar */}
-      <nav className="bg-red-200">
+      <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+          <div className="flex items-center justify-between h-24">
+            
+            {/* Logo Section */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 text-white font-bold text-xl"><FaHospitalSymbol /></div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 text-white font-bold text-xl shadow-lg">
+                <FaHospitalSymbol />
+              </div>
               <div>
-                <h1 className="font-semibold text-lg">INDIRA</h1>
-                <p className="text-sm -mt-1">HOSPITAL</p>
+                <h1 className="font-bold text-xl tracking-tight text-slate-900 leading-none">INDIRA</h1>
+                <p className="text-[10px] font-bold text-black uppercase tracking-[0.2em]">Hospital</p>
               </div>
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8 text-black font-medium">
-              <Link to="/" className="hover:text-red-600 focus:text-red-600 ">Home</Link>
-              <Link to="/about" className="hover:text-red-600 focus:text-red-600">About Us</Link>
-              <Link to="/services" className="hover:text-red-600 focus:text-red-600">Services</Link>
-              <Link to="/contact" className="hover:text-red-600 focus:text-red-600">Contact</Link>
-              <div className="text-center text-sm py-2 cursor-pointer hover:text-red-600">Emergency call: (406) 555-0120</div>
+            <div className="hidden md:flex items-center gap-8 text-black font-bold">
+              <NavLink to="/" className={activeLinkStyle}>Home</NavLink>
+              <NavLink to="/about" className={activeLinkStyle}>About Us</NavLink>
+              <NavLink to="/services" className={activeLinkStyle}>Services</NavLink>
+              <NavLink to="/contact" className={activeLinkStyle}>Contact</NavLink>
+              
+              <div className="text-black font-extrabold ml-4 hover:text-red-600">Emergency call : (406) 555-0120</div>
             </div>
-
-            {/* Top Emergency Bar */}
-            
 
             {/* Book Appointment Button */}
             <div className="hidden md:block">
-              <button className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition cursor-pointer">
+              <button className="bg-red-600 text-white px-7 py-3 rounded-md font-bold hover:bg-red-700 transition-all shadow-md active:scale-95">
                 Book Appointment
               </button>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-slate-900">
+                {isOpen ? <X size={32} /> : <Menu size={32} />}
               </button>
             </div>
           </div>
@@ -54,13 +55,19 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white shadow-md">
-            <div className="flex flex-col items-center gap-4 py-6 text-gray-700 font-medium">
-              <Link to="/" className="hover:text-red-600">Home</Link>
-              <Link to="/about" className="hover:text-red-600">About Us</Link>
-              <Link to="/services" className="hover:text-red-600">Services</Link>
-              <Link to="/contact" className="hover:text-red-600">Contact</Link>
-              <button className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">Book Appointment</button>
+          <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xl">
+            <div className="flex flex-col items-center gap-6 py-8 text-slate-900 font-bold">
+              <NavLink to="/" onClick={() => setIsOpen(false)} className={activeLinkStyle}>Home</NavLink>
+              <NavLink to="/about" onClick={() => setIsOpen(false)} className={activeLinkStyle}>About Us</NavLink>
+              <NavLink to="/services" onClick={() => setIsOpen(false)} className={activeLinkStyle}>Services</NavLink>
+              <NavLink to="/contact" onClick={() => setIsOpen(false)} className={activeLinkStyle}>Contact</NavLink>
+              
+              <div className="text-red-600 font-black pt-2 border-t w-full text-center">
+                Call: (406) 555-0120
+              </div>
+              <button className="bg-red-600 text-white px-10 py-3 rounded-md font-bold shadow-lg">
+                Book Appointment
+              </button>
             </div>
           </div>
         )}

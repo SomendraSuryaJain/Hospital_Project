@@ -1,7 +1,7 @@
 import React from "react";
 import { Phone, MapPin } from "lucide-react";
 
-const HeroSection = () => {
+const HomeSection = () => {
   return (
     <section className="relative w-full h-screen">
 
@@ -51,4 +51,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HomeSection;

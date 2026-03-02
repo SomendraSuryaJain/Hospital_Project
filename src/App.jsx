@@ -5,7 +5,7 @@ import Home from './pages/homepage/Home';
 import About from './pages/aboutpage/About';
 import Services from './pages/servicespage/Services';
 import Contact from './pages/contactpage/Contact';
-import Footer from './components/footer/Footer';
+// import Footer from './components/footer/Footer';
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };

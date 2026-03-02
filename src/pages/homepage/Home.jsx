@@ -1,16 +1,18 @@
 import React from 'react'
-import HeroSection from '../../components/hero/HeroSection';
-import InfoCards from '../../components/infocard/InfoCards';
-import AboutSection from '../../components/aboutsection/AboutSection';
-import MedicalSection from '../../components/medicalsection/MedicalSection';
+import Footer from '../../components/footer/Footer';
+import HomeSection from '../../components/homesection/HomeSection';
+import InfoCards from '../../components/homesection/InfoCards';
+import AboutSection from '../../components/homesection/AboutSection'
+import MedicalSection from '../../components/homesection/MedicalSection';
 
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      <HomeSection />
       <InfoCards />
       <AboutSection />
       <MedicalSection />
+      <Footer />
     </div>
   );
 };
